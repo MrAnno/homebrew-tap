@@ -11,6 +11,12 @@ class Criterion < Formula
   head "https://github.com/Snaipe/Criterion.git",
     branch: "bleeding"
 
+  bottle do
+    root_url "https://ghcr.io/v2/mranno/tap"
+    sha256 cellar: :any, big_sur:      "2a37fc2d74878cec5f8fd4e5c70b288d1de7391e3d538179450254bba51731ab"
+    sha256               x86_64_linux: "a1e68437f18e99b9c96a2abaa3a0a67029179138512169b4117513e3ac4b397e"
+  end
+
   depends_on "cmake" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
