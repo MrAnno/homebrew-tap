@@ -5,7 +5,7 @@ class Criterion < Formula
   url "https://github.com/Snaipe/Criterion.git",
     using:    :git,
     revision: "a91a69f65006c057812fdd850b100ff28790ea73"
-  version "2.3.3-bleeding1"
+  version "2.3.3-bleeding2"
   license "MIT"
 
   head "https://github.com/Snaipe/Criterion.git",
@@ -28,7 +28,7 @@ class Criterion < Formula
   def install
     system "meson", "setup", *std_meson_args, "--wrap-mode=default", "build"
     system "meson", "compile", "-C", "build"
-    system "meson", "install", "-C", "build"
+    system "meson", "install", "--skip-subprojects", "-C", "build"
   end
 
   test do
