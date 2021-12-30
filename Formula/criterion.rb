@@ -22,7 +22,6 @@ class Criterion < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
 
-  depends_on arch: :x86_64
   depends_on "libffi"
   depends_on "libgit2"
 
