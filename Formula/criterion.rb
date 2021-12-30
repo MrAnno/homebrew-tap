@@ -24,6 +24,7 @@ class Criterion < Formula
 
   depends_on arch: :x86_64
   depends_on "libffi"
+  depends_on "libgit2"
 
   def install
     system "meson", "setup", *std_meson_args, "--wrap-mode=default", "build"
