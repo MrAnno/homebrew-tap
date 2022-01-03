@@ -4,8 +4,8 @@ class Criterion < Formula
 
   url "https://github.com/Snaipe/Criterion.git",
     using:    :git,
-    revision: "4a3dd56003160c03f5024c27790c2d58b1ab1423"
-  version "2.3.3-bleeding3"
+    revision: "147ba2cbcc5a8af8f79e3065428f293adc75b2e9"
+  version "2.3.3-bleeding4"
   license "MIT"
 
   head "https://github.com/Snaipe/Criterion.git",
