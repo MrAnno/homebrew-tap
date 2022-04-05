@@ -12,8 +12,8 @@ class Criterion < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/mranno/tap"
-    sha256 cellar: :any, big_sur:      "ac01c6375bead776d287602855ee754c5c4e73a04a9c506f0c14abb8a32723e1"
-    sha256               x86_64_linux: "2365375276a67cb014288d3b5b346557ff95e2bd1fc5c57271d0fbdca9ad23ca"
+    sha256 cellar: :any, big_sur:      "0410c3e0f3f991ee8e2490e0fce82920e0c2349bb9cc2e215e340e1373c08bea"
+    sha256               x86_64_linux: "c54a6c5c90a4f4ff0ec642118279b8b51dfa1b43bfd00f1efcc7e99dfa47296d"
   end
 
   depends_on "cmake" => :build
