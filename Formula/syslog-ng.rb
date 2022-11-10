@@ -37,6 +37,8 @@ class SyslogNg < Formula
   depends_on "rabbitmq-c"
   depends_on "riemann-client"
 
+  skip_clean "var"
+
   def install
     system "./configure", *std_configure_args,
                           "--disable-silent-rules",
