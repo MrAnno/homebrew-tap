@@ -9,8 +9,8 @@ class SyslogNg < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/mranno/tap"
-    sha256 monterey:     "4f7881913012952bd040f7abc44b613170e753592dca87b7ea2d8fbff42405b3"
-    sha256 x86_64_linux: "d8deeba24ee3c2c765296c4c173712c38b2e678f66f11bd3d3a0a4de0b8a6d44"
+    sha256 monterey:     "ad75b9deddc3594468c544713a50be68f647a7361b81c73af352933d4f4cf9ca"
+    sha256 x86_64_linux: "40a10018cffb1e3e86cd1cb93ecd90093f9406dff7a4e11bdad55fdf2ae6c160"
   end
 
   depends_on "autoconf" => :build
