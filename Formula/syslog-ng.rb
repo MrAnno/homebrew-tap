@@ -5,6 +5,7 @@ class SyslogNg < Formula
   url "https://github.com/syslog-ng/syslog-ng/releases/download/syslog-ng-3.38.1/syslog-ng-3.38.1.tar.gz"
   sha256 "5491f686d0b829b69b2e0fc0d66a62f51991aafaee005475bfa38fab399441f7"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
+  revision 1
 
   bottle do
     root_url "https://ghcr.io/v2/mranno/tap"
@@ -31,16 +32,21 @@ class SyslogNg < Formula
   depends_on "librdkafka"
   depends_on "mongo-c-driver"
   depends_on "net-snmp"
-  depends_on "openssl@3"
+  depends_on "openssl@1.1" # openssl@3 conflicts with curl
   depends_on "pcre"
   depends_on "python@3.11"
   depends_on "rabbitmq-c"
   depends_on "riemann-client"
 
+  skip_clean "var"
+
   def install
+    sng_python_ver = Formula["python@3.11"].version.major_minor
+
     system "./configure", *std_configure_args,
                           "--disable-silent-rules",
                           "--with-ivykis=system",
+                          "--with-python=#{sng_python_ver}",
                           "--disable-java",
                           "--disable-java-modules"
     system "make", "install"
