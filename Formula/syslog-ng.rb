@@ -31,7 +31,7 @@ class SyslogNg < Formula
   depends_on "librdkafka"
   depends_on "mongo-c-driver"
   depends_on "net-snmp"
-  depends_on "openssl@3"
+  depends_on "openssl@1.1" # openssl@3 conflicts with curl
   depends_on "pcre"
   depends_on "python@3.11"
   depends_on "rabbitmq-c"
