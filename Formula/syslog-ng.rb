@@ -40,9 +40,12 @@ class SyslogNg < Formula
   skip_clean "var"
 
   def install
+    sng_python_ver = Formula["python@3.11"].version.major_minor
+
     system "./configure", *std_configure_args,
                           "--disable-silent-rules",
                           "--with-ivykis=system",
+                          "--with-python=#{sng_python_ver}",
                           "--disable-java",
                           "--disable-java-modules"
     system "make", "install"
